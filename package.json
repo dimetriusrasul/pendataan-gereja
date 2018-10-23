@@ -45,12 +45,12 @@
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./node_modules ./src/scss -o ./src/scss",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./node_modules ./src/scss -o ./src/scss --watch --recursive",
-    "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+      "postinstall": "bower install && grunt build",
+      "start": "nf start"
   },
   "bugs": {
     "url": "https://github.com/coreui/coreui-free-react-admin-template/issues"
